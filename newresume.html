@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="uft-8">
+<title>Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: white;
+}
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+body{
+
+}
+h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h2 {
+    margin-block-start: 15px;
+    margin-block-end: 15px;
+}
+
+hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+nav{
+    background: rgb(39, 39, 39);
+    height: 80px;
+    width: 100%;  
+    box-shadow: 0px 2px 10px black;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 10px;
+}
+a:hover {
+    background: rgb(61, 61, 61);
+}
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+.section {
+    top:-100px;
+    position: relative;
+}
+.container {
+}
+.resume {
+    background-color: #333;
+    padding: 15px 5vw;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+.uparr {
+    margin-right: 5px;
+    text-decoration: none;
+}
+#check {
+    display: none;
+}
+@media (max-width: 952px) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(39, 39, 39);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover {
+        background: none;
+        color: lightgrey;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+</style>
+
+<div class="container">
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Resume</label>
+            <ul>
+                <li><a class="nav-link" href="#Education" onclick="document.getElementById('check').checked = false;">Education</a></li>
+                <li><a class="nav-link" href="#Experience" onclick="document.getElementById('check').checked = false;">Experience</a></li>
+                <li><a class="nav-link" href="#Leadership" onclick="document.getElementById('check').checked = false;">Leadership</a></li>
+                <li><a class="nav-link" href="#Awards" onclick="document.getElementById('check').checked = false;">Awards</a></li>
+                <li><a class="nav-link" href="#Projects" onclick="document.getElementById('check').checked = false;">Projects</a></li>
+                <li><a class="nav-link" href="#Skills" onclick="document.getElementById('check').checked = false;">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <div class="resume">
+            <br>
+            <h1><span class="section" id="top"></span>Christopher Gallo</h1>
+            <br>
+            <h2><span class="section" id="Education"></span><a class="uparr" href="#top">&uarr;</a><i>Education</i></h2>
+            <p class="lead"><b>California State University, Stanislaus</b>
+                B.S. in Computer Science.</p>
+            <p>
+                Cumulative <b>GPA: 3.52</b><br>
+                Expected to graduate <b>June 2021</b><br>
+                Relative Coursework: Data Structures and Algorithms, Discrete Structures, Database Management Systems,
+                Computer Graphics
+            </p>
+        
+            <hr>
+            <h2><span class="section" id="Experience"></span><a class="uparr" href="#top">&uarr;</a><i>Experience</i></h2>
+        
+            <p class="lead"><b>Software Engineer Intern</b> at <b>Northrop Grumman</b> from June 2020 to August 2020</p>
+            <p>Created a stand-alone web app using HTML, JS, CSS, jQuery, and Bootstrap that parses files, populates tables
+                and trees with classified data, implemented input validation and hashing algorithm to meet cybersecurity
+                requirements. Implemented agile methodologies like daily scrum stand-ups, sprint planning, pair programming, and
+                incremental and iterative development by using Jira, Confluence, and Bitbucket.</p>
+        
+            <p class="lead"><b>Software Developer Intern</b> at <b>Novo Technologies</b> from November 2018 to Februrary 2019
+            </p>
+            <p>Created a full-stack desktop app in C# and XAML and implemented a search functionality that displays
+                information from multiple databases using Microsoft SQL Server. Parsed SQL query results to automatically
+                render relevant information into a PDF, eliminating the need for manual data migration. Redesigned the GUI
+                to make it intuitive and implemented the internal tool for non-technical people to utilize.</p>
+        
+            <p class="lead"><b>PLC Programmer Intern</b> at <b>Westlund Automation Inc</b> from January 2018 to August 2019</p>
+            <p>Increased factory production of manufactured goods by up to 10% by programming PLCs using Studio Logix
+                Designer 5000 software to automate manual tasks, resulting in man-hours saved by the company. Troubleshooting
+                motor
+                starters and variable frequency drives. Designed wiring and motor diagrams using AutoCAD.</p>
+        
+            <p class="lead"><b>Research Assistant</b> at <b>CSU Stanislaus</b> from March 2018 to May 2018</p>
+            <p>Performed statistical analysis on sensitive wine data using WEKA (Java) and supervised machine learning to
+                find correlations between consumer taste and wine quality.</p>
+        
+            <hr>
+            <h2><span class="section" id="Leadership"></span><a class="uparr" href="#top">&uarr;</a><i>Leadership Experience</i></h2>
+        
+            <p class="lead"><b>Google’s Hispanic Student Leadership Summit</b> in April 2019</p>
+            <p>Chosen as 1 out of 50 participants from over 850 applicants to attend a 2-day Leadership Summit comprised
+                of tech activities and talks from Latinx Googlers.</p>
+        
+            <p class="lead"><b>Lead Organizing Team for StanHacks</b></p>
+            <p>Created CSU Stanislaus’s first annual hackathon with 6 sponsors</p>
+
+            <hr>
+            <h2><span class="section" id="Awards"></span><a class="uparr" href="#top">&uarr;</a><i>Awards</i></h2>
+
+            <p class="lead"><b>S-STEM Scholarship Recipient</b></p>
+            <p>Received a competitive $34,000 scholarship for academic excellence in Computer Science and strong faculty
+                recommendations</p>
+
+            <hr>
+            <h2><span class="section" id="Projects"></span><a class="uparr" href="#top">&uarr;</a><i>Projects and Hackathons</i></h2>
+
+            <p class="lead"><b>Arduino GameBot</b></p>
+            <p>Won 1st place at UC Merced’s annual CS4ME hackathon for building an Arduino game, out of 20 projects.
+            Architected a circuit diagram, connected hardware components, and programmed the motors, ultrasonic
+            sensor, and LCD screen to replicate a self driving car. </p>
+
+            <p class="lead"><b>Map-Based Pothole Detector</b></p>
+            <p>Leveraged Google Maps API and Firebase to create a real-time web app that utilizes crowd-sourced
+            information to graphically sketch potholes on the map. Awarded Best Tech Domain at CSU Stanislaus’s Hackathon</p>
+            <hr>
+
+            <h2><span class="section" id="Skills"></span><a class="uparr" href="#top">&uarr;</a><i>Skills</i></h2>
+
+            <p class="lead"><b>Languages and Technologies</b></p>
+            <p>Python; JavaScript; HTML; CSS; C#; C++; SQL; React; Visual Studio; Git; Microsoft SQL Server; Firebase; 
+                MySQL; Git; Arduino; Jira;</p>
+
+        </div>
+    </body>
+
+</html>
